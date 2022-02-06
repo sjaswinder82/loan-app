@@ -9,6 +9,17 @@
  - Install dependencies
     ```
     composer install
-
     ```
-    
+ - Update env w
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=xxx
+    DB_USERNAME=xxx
+    DB_PASSWORD=xxx
+    ```
+ - Run below command/s
+    ```
+    php artisan migrate
+    ```
