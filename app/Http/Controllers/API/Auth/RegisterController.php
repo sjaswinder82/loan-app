@@ -49,6 +49,6 @@ class RegisterController extends ApiController
      */
     private function encryptPassword($request)
     {
-        return $request->input('password');
+        return bcrypt($request->input('password'));
     }
 }
