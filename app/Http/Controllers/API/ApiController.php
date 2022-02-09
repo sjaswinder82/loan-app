@@ -19,4 +19,11 @@ class ApiController extends Controller
 
         return response()->json($response);
     }
+
+    public function respondError($message='Error', $code=422)
+    {        
+        $response['message'] = $message;
+
+        return response()->json($response, $code);
+    }
 }
