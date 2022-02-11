@@ -34,7 +34,8 @@ class UserTransformer extends TransformerAbstract
         $response = [
             'id' => $resource->id,
             'email' => $resource->email,            
-            'name' => $resource->name,            
+            'name' => $resource->name, 
+            'created_at' => $resource->created_at,           
         ];
 
         if($resource->access_token) { 
