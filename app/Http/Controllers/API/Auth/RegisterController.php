@@ -39,7 +39,7 @@ class RegisterController extends ApiController
         $user = $this->userRepository->register($params);
         
         $message = trans('messages.register_success');
-        return $this->respondItem($user, new UserTransformer, 'user', $message);
+        return $this->respondCreated($user, new UserTransformer, 'user', $message);
     }
 
     /**
