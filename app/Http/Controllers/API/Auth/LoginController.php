@@ -32,7 +32,7 @@ class LoginController extends ApiController
         $token = auth()->attempt($credentials);
         
         if(!$token) {
-            return $this->respondError(trans('messages.invalid_credentials'), 401);
+            return $this->respondError(trans('messages.invalid_credentials'), 422);
         }
 
         $user = auth()->user();
