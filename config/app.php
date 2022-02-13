@@ -232,4 +232,14 @@ return [
 
     ],
 
+    'loan_interest' => 8,
+    'loan_status' => [
+        'pending' => 'PENDING',
+        'approved' => 'APPROVED',
+        'rejected' => 'REJECTED',
+    ],
+    'payment_status' => [
+        'failed' => 'FAILED',
+        'SUCCESS' => 'SUCCESS',
+    ],
 ];
