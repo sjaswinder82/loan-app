@@ -240,6 +240,9 @@ return [
     ],
     'payment_status' => [
         'failed' => 'FAILED',
-        'SUCCESS' => 'SUCCESS',
+        'paid' => 'PAID',
+        'pending' => 'PENDING',
+        'due' => 'DUE_PENDING',
     ],
+    'pagination_limit' => 10,
 ];

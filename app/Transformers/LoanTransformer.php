@@ -12,7 +12,7 @@ class LoanTransformer extends TransformerAbstract
      * @var array
      */
     protected $defaultIncludes = [
-        //
+        
     ];
     
     /**
@@ -21,7 +21,7 @@ class LoanTransformer extends TransformerAbstract
      * @var array
      */
     protected $availableIncludes = [
-        //
+        'payments'
     ];
     
     /**
@@ -41,5 +41,10 @@ class LoanTransformer extends TransformerAbstract
             'disbursed_at' => $resource->disbursal_date,
             'closed_at' => $resource->closure_date,
         ];
+    }
+
+    public function includePayments($resource)
+    {
+        return $this->collection($resource->payments, new PaymentTransformer, 'payment');
     }
 }

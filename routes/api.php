@@ -20,5 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', RegisterController::class);
 Route::post('/login', LoginController::class);
 Route::middleware(['jwt.auth'])->group(function () {  
-    Route::resource('/loans', LoanController::class)->only('store');
+    Route::resource('/loans', LoanController::class)->only('store', 'index', 'show');
 });
