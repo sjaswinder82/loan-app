@@ -10,7 +10,7 @@
     ```
     composer install
     ```
- - Update env w
+ - Update env
     ```
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -22,4 +22,8 @@
  - Run below command/s
     ```
     php artisan migrate
+    ```
+ - Run feature test with command
+    ```
+    vendor/bin/phpunit
     ```

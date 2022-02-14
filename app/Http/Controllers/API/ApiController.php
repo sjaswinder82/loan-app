@@ -20,6 +20,16 @@ class ApiController extends Controller
         return response()->json($response);
     }
 
+    public function respondCollection($resource, $transformer, $type)
+    {
+        $response =  fractal($resource, $transformer)
+                    ->withResourceName($type)
+                    ->toArray();
+
+        return response()->json($response);
+    }
+
+
     public function respondCreated($resource, $transformer, $type, $message = null)
     {
         $response =  fractal($resource, $transformer)
